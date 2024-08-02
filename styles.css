@@ -1,0 +1,464 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #dbe2ef);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #004080;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 120px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#gambar-kereta {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+/* Main Section Styles */
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+/* Form Styles */
+form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #555;
+}
+
+form input[type="text"] {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+form button:active {
+    background-color: #00408d;
+}
+
+/* Rekap Absensi Styles */
+#rekap-absensi {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+#rekap-absensi h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    color: #333;
+}
+
+#rekap-absensi button {
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#rekap-absensi button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#rekap-absensi button:active {
+    background-color: #1e7e34;
+}
+
+/* Riwayat Absensi Styles */
+#riwayat-absensi {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#riwayat-absensi h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+    transform: translateX(5px);
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+#export-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#export-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+	
+	/* Additional Styles for Password Form */
+#password-form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+#password-form h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#password-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #555;
+}
+
+#password-form input[type="password"] {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#password-form input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#password-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#password-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#password-form button:active {
+    background-color: #00408d;
+}
+
+/* Existing Styles */
+
+/* Additional Styles for New Buttons */
+#hapus-riwayat-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#hapus-riwayat-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+#rekap-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#rekap-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Adjustments for Password Form */
+#password-form {
+    margin-top: 1rem;
+}
+
+#password-form button {
+    background-color: #007BFF;
+}
+
+#password-form button:hover {
+    background-color: #0056b3;
+}
+/* Existing Styles */
+
+/* Additional Styles for New Buttons */
+#rekap-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#rekap-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Adjustments for Password Form */
+#password-form {
+    margin-top: 1rem;
+}
+
+#password-form button {
+    background-color: #007BFF;
+}
+
+#password-form button:hover {
+    background-color: #0056b3;
+}
+/* Animasi untuk tombol saat klik */
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+        background-color: #007BFF;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: #0056b3;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #007BFF;
+    }
+}
+
+button:active {
+    animation: clickAnimation 0.3s ease-in-out;
+}
+
+/* Animasi untuk konfirmasi absen */
+@keyframes confirmAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.confirmation-message {
+    display: none;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation: confirmAnimation 0.5s ease-out;
+}
+/* Styles for datetime widget */
+#datetime-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    margin: 10px 0;
+}
+
+#current-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#current-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+/* Styles for pop-up confirmation */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.popup.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.popup.hide {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+/* Animation for pop-up */
+@keyframes popupAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Styles for pop-up confirmation */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.popup.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.popup.hide {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+/* Animation for pop-up */
+@keyframes popupAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+}

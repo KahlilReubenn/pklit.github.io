@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Absensi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@latest/dist/xlsx.full.min.js"></script>
+	<audio id="sound-masuk" src="sounds/absen-masuk.mp3"></audio>
+<audio id="sound-pulang" src="sounds/absen-pulang.mp3"></audio>
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo" id="logo">
+        <img src="images/kereta-api.jpg" alt="Gambar Kereta Api" id="gambar-kereta">
+        <h1>Website Absensi PKL IT DAOP 6 </h1>
+        <div id="datetime-widget">
+            <div id="current-date"></div>
+            <div id="current-time"></div>
+        </div>
+    </header>
+    <main>
+        <section id="absensi-form">
+            <h2>Catat Kehadiran</h2>
+            <form id="form-masuk">
+                <label for="nama-masuk">Nama:</label>
+                <input type="text" id="nama-masuk" name="nama-masuk" required>
+                <label for="sekolah-masuk">Sekolah:</label>
+                <select id="sekolah-masuk" name="sekolah-masuk" required>
+                    <option value="">Pilih Sekolah</option>
+                    <option value="SMK Negeri 2 Surakarta">SMK Negeri 2 Surakarta</option>
+                    <option value="SMK Negeri 9 Surakarta">SMK Negeri 9 Surakarta</option>
+                </select>
+                <button type="submit">Absen Masuk</button>
+            </form>
+            <form id="form-pulang">
+                <label for="nama-pulang">Nama:</label>
+                <input type="text" id="nama-pulang" name="nama-pulang" required>
+                <label for="sekolah-pulang">Sekolah:</label>
+                <select id="sekolah-pulang" name="sekolah-pulang" required>
+                    <option value="">Pilih Sekolah</option>
+                    <option value="SMK Negeri 2 Surakarta">SMK Negeri 2 Surakarta</option>
+                    <option value="SMK Negeri 9 Surakarta">SMK Negeri 9 Surakarta</option>
+                </select>
+                <button type="submit">Absen Pulang</button>
+            </form>
+        </section>
+        <section id="riwayat-absensi">
+            <h2>Riwayat Kehadiran</h2>
+            <button id="export-btn">Ekspor ke Excel</button>
+            <button id="rekap-btn" style="display: none;">Tampilkan Rekap</button>
+            <ul id="daftar-absensi">
+                <!-- Riwayat absensi akan ditampilkan di sini -->
+            </ul>
+            <div id="password-form" style="display: none;">
+                <h3>Masukkan Password untuk Ekspor</h3>
+                <form id="form-password">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Submit</button>
+                </form>
+                <p id="error-message" style="color: red; display: none;">Password salah. Coba lagi.</p>
+            </div>
+        </section>
+    </main>
+    <!-- Pop-up Confirmation -->
+    <div id="popup" class="popup"></div>
+    <script src="script.js"></script>
+</body>
+</html>
